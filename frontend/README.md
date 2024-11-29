@@ -48,6 +48,7 @@ import Verify from "./pages/Verify";
 
 const App = () => {
 return (
+
 <main className="overflow-hidden text-[#404040] bg-primary">
 <Header />
 <Routes>
@@ -94,6 +95,7 @@ navigate("/login");
 };
 
 return (
+
 <header className="py-5 w-full bg-white">
 <div className="max-padd-container flexBetween">
 {/_ Logo _/}
@@ -170,6 +172,7 @@ export default Header;
 # in Header.jsx edit the code to this
 
 {/_ Navbar _/}
+
 <div className="flex-1">
 <Navbar
 menuOpened={menuOpened}
@@ -204,6 +207,7 @@ icon: <SiMaildotcom />,
 ];
 
 return (
+
 <nav className={containerStyles}>
 {/_ close button inside navbar _/}
 {menuOpened && (
@@ -254,6 +258,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
 return (
+
 <section className="max-padd-container max-xl:mt-8 mb-16">
 <div className="max-padd-container bg-hero bg-cover bg-center bg-no-repeat h-[736px] w-full rounded-tl-3xl rounded-tr-3xl mt-6">
 <div className="relative max-w-[777px] top-48 ">
@@ -292,6 +297,7 @@ const statistics = [
 ];
 
 return (
+
 <section>
 <div className="max-padd-container">
 <div className="max-padd-container py-10 bg-white rounded-2xl my-6">
@@ -360,6 +366,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
 return (
+
 <footer className="bg-primary py-10 sm:pt-16 lg:pt-24">
 <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 <div className="grid grid-cols-2 gap-x-12 gap-y-16 md:col-span-3 lg:grid-cols-6">
@@ -616,6 +623,7 @@ const Home = () => {
 return (
 <>
 <Hero />
+
 <Footer />
 </>
 );
@@ -662,6 +670,7 @@ setNewArrivals(data);
 }, [products]);
 
 return (
+
 <section>
 <Title title={"New Arrivals"} titleStyles={"text-center"} />
 {/_ container _/}
@@ -682,6 +691,7 @@ export default NewArrivals;
 
 const Title = ({ title, titleStyles }) => {
 return (
+
 <div className={`${titleStyles} pb-20`}>
 <span className="h2 capitalize pb-1 relative after:w-2/3 after:h-1 after:bg-secondary after:absolute after:-bottom-1 after:right-0 after:rounded">
 {title}
@@ -711,6 +721,7 @@ return (
 <>
 <Hero />
 <NewArrivals />
+
 <Footer />
 </>
 );
@@ -751,6 +762,7 @@ setNewArrivals(data);
 }, [products]);
 
 return (
+
 <section className="max-padd-container py-16">
 <Title title={"New Arrivals"} titleStyles={"text-center"} />
 {/_ container _/}
@@ -773,6 +785,7 @@ import { Link } from "react-router-dom";
 
 const Item = ({ product }) => {
 return (
+
 <div className="ring-1 ring-slate-900/5 rounded-xl bg-white overflow-hidden">
 <Link to={`/product/${product._id}`} className="flexCenter relative">
 <img src={product.image[0]} alt="productImg" />
@@ -808,6 +821,7 @@ setPopularProducts(data.slice(0, 5));
 }, [products]);
 
 return (
+
 <section className="max-padd-container py-16">
 <Title title={"Popular Products"} titleStyles={"text-center"} />
 {/_ container _/}
@@ -837,6 +851,7 @@ return (
 <Hero />
 <NewArrivals />
 <PopularProducts />
+
 <Footer />
 </>
 );
@@ -853,6 +868,7 @@ import { LiaUndoAltSolid } from "react-icons/lia";
 
 const Features = () => {
 return (
+
 <section className="max-padd-container py-16">
 {/_ title _/}
 <Title title={"Our Features"} titleStyles={"text-center"} />
@@ -907,6 +923,7 @@ return (
 <NewArrivals />
 <PopularProducts />
 <Features />
+
 <Footer />
 </>
 );
@@ -973,6 +990,7 @@ setFilteredProducts(sorted);
 }, [category, subCategory, sortType, products]);
 
 return (
+
 <section className="max-padd-container">
 <div className="flex flex-col sm:flex-row gap-8 mt-8 xl:mt-6">
 {/_ Filter Options _/}
@@ -1118,6 +1136,7 @@ setVisible(false);
 }, [location]);
 
 return showSearch && visible ? (
+
 <section className="py-4 pb-7">
 <div className="text-center bg-primary">
 <div className="inline-flex items-center justify-center ring-1 ring-slate-900/5 px-3 py-1.5 rounded-full bg-primary">
@@ -1149,6 +1168,7 @@ const Collection = () => {
 ---
 
 return (
+
 <section className="max-padd-container">
 <div className="flex flex-col sm:flex-row gap-8 mt-8 xl:mt-6">
 {/_ Filter Options _/}
@@ -1240,6 +1260,7 @@ fetchProductData();
 }, [productId, products]);
 
 return (
+
 <section>
 <div className="max-padd-container">
 {/_ product data _/}
@@ -1353,6 +1374,7 @@ return <div>...Loading</div>;
 }
 
 return (
+
 <section>
 <div className="max-padd-container mt-8 xl:mt-6">
 {/_ product data _/}
@@ -1477,6 +1499,7 @@ let filtered = products.slice();
 }, [products]);
 
 return (
+
 <div className="max-padd-container py-16">
 <Title title={"Related Products"} />
 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -1579,6 +1602,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
 return (
+
 <main className="overflow-hidden text-[#404040] bg-primary">
 <ToastContainer />
 <Header />
@@ -1650,6 +1674,7 @@ setCartData(tempData);
 }, [cartItems]);
 
 return (
+
 <section>
 <div className="max-padd-container">
 <div className="max-padd-container py-10 bg-white rounded-2xl my-6 max-xl:mt-8">
@@ -1822,6 +1847,7 @@ updateQuantity(id, size, newValue);
 };
 
 return (
+
 <section>
 <div className="max-padd-container">
 <div className="max-padd-container py-10 bg-white rounded-2xl my-6 max-xl:mt-8">
@@ -1943,6 +1969,7 @@ const CartTotal = () => {
 const { currency, getCartAmount, delivery_charges } = useContext(ShopContext);
 
 return (
+
 <div className="w-full">
 <h3 className="bold-22 mb-5">
 Cart <span className="text-secondary">Total</span>
@@ -2077,6 +2104,7 @@ const { navigate } = useContext(ShopContext);
 const [method, setMethod] = useState("cod");
 
 return (
+
 <section>
 {/_ container _/}
 <div className="max-padd-container">
@@ -2213,6 +2241,7 @@ const Orders = () => {
 const { products, currency } = useContext(ShopContext);
 
 return (
+
 <section>
 <div className="max-padd-container">
 <div className="max-padd-container py-10 bg-white rounded-2xl my-6 max-xl:mt-8">
@@ -2312,6 +2341,7 @@ const Login = () => {
 const [currState, setCurrState] = useState("Sign Up");
 
 return (
+
 <section className="absolute top-0 left-0 h-full w-full z-50 bg-white">
 {/_ container _/}
 <div className="flex h-full w-full">
@@ -2528,6 +2558,7 @@ return (
 ---
 
 {/_ Form Side _/}
+
 <div className="flex w-full sm:w-1/2 items-center justify-center">
 <form
             onSubmit={onSubmitHandler}
@@ -2803,3 +2834,438 @@ getProductsData();
 }, []);
 
 ## NEXT WELL CREATE THE PATMENT METHOD, FIRST GO TO BACK README
+
+---
+
+## PLACE ORDER TEST IN CONSOLE
+
+# in PlaceOrder.jsx
+
+const PlaceOrder = () => {
+const {
+navigate,
+backendUrl,
+token,
+setToken,
+cartItems,
+setCartItems,
+getCartAmount,
+delivery_charges,
+products,
+} = useContext(ShopContext);
+const [method, setMethod] = useState("COD");
+
+const [formData, setFormData] = useState({
+firstName: "",
+lastName: "",
+email: "",
+street: "",
+city: "",
+state: "",
+zipcode: "",
+country: "",
+phone: "",
+});
+
+const onChangeHandler = (e) => {
+const name = e.target.name;
+const value = e.target.value;
+
+    setFormData((data) => ({ ...data, [name]: value }));
+
+};
+
+const onSubmitHandler = async (e) => {
+e.preventDefault();
+try {
+let orderItems = [];
+for (const items in cartItems) {
+for (const item in cartItems[items]) {
+if (cartItems[items][item] > 0) {
+const itemInfo = structuredClone(
+products.find((product) => product.\_id === items)
+);
+if (itemInfo) {
+itemInfo.size = item;
+itemInfo.quantity = cartItems[items][item];
+orderItems.push(itemInfo);
+}
+}
+}
+}
+console.log(orderItems);
+} catch (error) {
+console.log(error);
+}
+};
+
+return (
+
+<section>
+{/_ container _/}
+<form onSubmit={onSubmitHandler} className="max-padd-container">
+<div className="max-padd-container py-10 bg-white rounded-2xl my-6">
+<div className="flex flex-col xl:flex-row gap-20 xl:gap-28">
+<div className="flex flex-1 flex-col gap-3 text-[95%]">
+{/_ delivery information _/}
+<h3 className="h3">Delivery Information</h3>
+<div className="flex gap-3">
+<input
+                  onChange={onChangeHandler}
+                  value={formData.firstName}
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  required
+                  className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none w-1/2"
+                />
+<input
+                  onChange={onChangeHandler}
+                  value={formData.lastName}
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  required
+                  className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none w-1/2"
+                />
+</div>
+
+              <input
+                onChange={onChangeHandler}
+                value={formData.email}
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none"
+              />
+              <input
+                onChange={onChangeHandler}
+                value={formData.phone}
+                type="text"
+                name="phone"
+                placeholder="Phone Number"
+                required
+                className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none"
+              />
+
+              <input
+                onChange={onChangeHandler}
+                value={formData.street}
+                type="text"
+                name="street"
+                placeholder="Street"
+                required
+                className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none"
+              />
+              <div className="flex gap-3">
+                <input
+                  onChange={onChangeHandler}
+                  value={formData.city}
+                  type="text"
+                  name="city"
+                  placeholder="City"
+                  required
+                  className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none w-1/2"
+                />
+                <input
+                  onChange={onChangeHandler}
+                  value={formData.state}
+                  type="text"
+                  name="state"
+                  placeholder="State"
+                  required
+                  className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none w-1/2"
+                />
+              </div>
+              <div className="flex gap-3">
+                <input
+                  onChange={onChangeHandler}
+                  value={formData.zipcode}
+                  type="text"
+                  name="zipcode"
+                  placeholder="Zip Code"
+                  required
+                  className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none w-1/2"
+                />
+                <input
+                  onChange={onChangeHandler}
+                  value={formData.country}
+                  type="text"
+                  name="country"
+                  placeholder="Country"
+                  required
+                  className="ring-1 ring-slate-900/15 p-1 pl-3 rounded-sm bg-primary outline-none w-1/2"
+                />
+              </div>
+            </div>
+            {/* cart total */}
+
+---
+
+<button type="submit" className="btn-dark max-xs:w-full">
+                  Place Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <Footer />
+
+## PLACE ORDER THROUGHT COD
+
+# in ShopContext.jsx
+
+    token,
+    setToken,
+    setCartItems,
+
+};
+
+# PlaceOrder.jsx
+
+import Footer from "../components/Footer";
+import axios from "axios";
+import { toast } from "react-toastify";
+
+---
+
+products,
+} = useContext(ShopContext);
+const [method, setMethod] = useState("cod");
+
+---
+
+const onSubmitHandler = async (e) => {
+e.preventDefault();
+try {
+let orderItems = [];
+for (const items in cartItems) {
+for (const item in cartItems[items]) {
+if (cartItems[items][item] > 0) {
+const itemInfo = structuredClone(
+products.find((product) => product.\_id === items)
+);
+if (itemInfo) {
+itemInfo.size = item;
+itemInfo.quantity = cartItems[items][item];
+orderItems.push(itemInfo);
+}
+}
+}
+}
+
+      let orderData = {
+        address: formData,
+        items: orderItems,
+        amount: getCartAmount() + delivery_charges,
+      };
+
+      switch (method) {
+        // api calls for COD
+        case "cod":
+          const response = await axios.post(
+            backendUrl + "/api/order/place",
+            orderData,
+            { headers: { token } }
+          );
+          if (response.data.success) {
+            setCartItems({});
+            navigate("/orders");
+          } else {
+            toast.error(response.data.message);
+          }
+          break;
+
+        default:
+          break;
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
+
+};
+
+return (
+
+<section>
+{/_ container _/}
+
+\*--------------------------------------------------\
+
+<CartTotal />
+              {/* Payment Method */}
+              <div className="my-6">
+                <h3 className="bold-20 mb-5">
+                  Payment <span className="text-green-400">Method</span>
+                </h3>
+                <div className="flex gap-3">
+                  <div
+                    onClick={() => setMethod("stripe")}
+                    className={`${
+                      method === "stripe" ? "text-green-400 !font-bold" : ""
+                    } btn-light !py-1 cursor-pointer`}
+                  >
+                    Stripe
+                  </div>
+                  <div
+                    onClick={() => setMethod("cod")}
+                    className={`${
+                      method === "cod" ? "text-green-400 !font-bold" : ""
+                    } btn-light !py-1 cursor-pointer`}
+                  >
+                    Cash on Delivery
+                  </div>
+                </div>
+
+## NOW LETS DISPLAY THE ORDER DATA ON USER PROFILE ORDER PAGE
+
+## FIRST GOTO ADMIN README
+
+---
+
+## LETS RENDER ALL THE ORDER OF A USER TO PROFILE PAGE
+
+## in Orders.jsx
+
+import { useContext, useEffect, useState } from "react";
+import { ShopContext } from "../context/ShopContext";
+import axios from "axios";
+
+const Orders = () => {
+const { backendUrl, token, currency } = useContext(ShopContext);
+
+const [orderData, setOrderData] = useState([]);
+
+const loadOrderData = async () => {
+try {
+if (!token) {
+return null;
+}
+const response = await axios.post(
+backendUrl + "/api/order/userorders",
+{},
+{ headers: { token } }
+);
+if (response.data.success) {
+let allOrdersItem = [];
+response.data.orders.map((order) => {
+order.items.map((item) => {
+item["status"] = order.status;
+item["payment"] = order.payment;
+item["paymentMethod"] = order.paymentMethod;
+item["date"] = order.date;
+allOrdersItem.push(item);
+});
+});
+setOrderData(allOrdersItem.reverse());
+}
+} catch (error) {
+console.log(error);
+}
+};
+
+useEffect(() => {
+loadOrderData();
+}, [token]);
+
+return (
+
+<section>
+<div className="max-padd-container">
+<div className="max-padd-container py-10 bg-white rounded-2xl my-6 max-xl:mt-8">
+{/_ title _/}
+<div className="">
+<h3 className="h3">
+Orders <span className="text-secondary">List</span>
+</h3>
+</div>
+{/_ container _/}
+{orderData.map((item, i) => (
+<div key={i}>
+
+---
+
+<div className="flex items-center gap-x-2">
+                          <h5 className="medium-14">Payment</h5>
+                          <p className="text-gray-400">{item.paymentMethod}</p>
+                        </div>
+                      </div>
+                      {/* Status & button */}
+                      <div className="flex flex-col xl:flex-row gap-3">
+                        <div className="flex items-center gap-2">
+                          <p className="min-w-2 h-2 rounded-full bg-green-500"></p>
+                          <p>{item.status}</p>
+                        </div>
+                        <button
+                          onClick={loadOrderData}
+                          className="btn-secondary !p-1.5 !text-xs"
+                        >
+                          Track Order
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr className="mx-auto h-[1px] bg-gray-900/10 mt-2" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Orders;
+
+---
+
+## LETS EMPLEMENT THE STRIPE PAYMENT FUNCTIONALITY
+
+# in PlaceOrder.jsx
+
+switch (method) {
+// api calls for COD
+case "cod":
+const response = await axios.post(
+backendUrl + "/api/order/place",
+orderData,
+{ headers: { token } }
+);
+if (response.data.success) {
+setCartItems({});
+navigate("/orders");
+} else {
+toast.error(response.data.message);
+}
+break;
+
+        case "stripe":
+          const responseStripe = await axios.post(
+            backendUrl + "/api/order/stripe",
+            orderData,
+            { headers: { token } }
+          );
+          if (responseStripe.data.success) {
+            const { session_url } = responseStripe.data;
+            window.location.replace(session_url);
+          } else {
+            toast.error(responseStripe.data.message);
+          }
+
+          break;
+
+        default:
+          break;
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error(error.message);
+    }
+
+## NOW LETS VERIFY THE PAYMENT, GOTO ADMIN README
+
+---

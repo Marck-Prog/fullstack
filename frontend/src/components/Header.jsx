@@ -89,7 +89,7 @@ const Header = () => {
                   </li>
                   <hr className="my-2" />
                   <li onClick={logout} className="flexBetween cursor-pointer">
-                    <p>Orders</p>
+                    <p>Logout</p>
                     <TbArrowNarrowRight className="text-[19px] opacity-50" />
                   </li>
                 </ul>
